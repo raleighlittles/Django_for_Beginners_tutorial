@@ -1,0 +1,12 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in object_list %}
+    <div class="post-entry">
+        <!-- the reason the url below is named post_detail is because thats whats set up in the URLconf -->
+        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+        <p> {{ post.body }} </p>
+    </div>
+    {% endfor %}
+{% endblock content %}
