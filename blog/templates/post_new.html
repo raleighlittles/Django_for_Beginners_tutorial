@@ -1,0 +1,13 @@
+<!-- templates/post_new.html -->
+{%  extends 'base.html' %}
+
+
+{%  block content %}
+    <h1>New post</h1>
+    <!-- CSRF token protects from Cross site scripting attacks -->
+    <form action="" method="post"> {%  csrf_token %}
+    {{ form.as_p }}
+        <input type="submit" value="Save"/>
+    </form>
+
+{%  endblock %}
