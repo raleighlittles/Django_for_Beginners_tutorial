@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# where to redirect the user to after they've been logged in?
+LOGIN_REDIRECT_URL = 'home'
+
 
 # Application definition
 
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog', # new
+    'accounts', # new
 ]
 
 MIDDLEWARE = [

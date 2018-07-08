@@ -49,8 +49,6 @@ class BlogTests(TestCase):
         self.assertContains(response, 'A good title')
         self.assertTemplateUsed(response, 'post_detail.html')
 
-
-
     def test_post_detail_view(self):
         response = self.client.get('/post/1/')
         # a knowingly wrong
