@@ -7,6 +7,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.6"

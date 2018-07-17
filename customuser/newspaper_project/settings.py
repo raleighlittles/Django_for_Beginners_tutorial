@@ -40,11 +40,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Internal
     'users', # new
+    'pages', # new,
+
+    # External
+    'crispy_forms', # new
+
 ]
 
-# use this if you're not going to use the default Django user model
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# use this if you're not going to use the default Django user model
 AUTH_USER_MODEL='users.CustomUser'
 
 MIDDLEWARE = [
