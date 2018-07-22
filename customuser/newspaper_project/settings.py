@@ -68,6 +68,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'newspaper_project.urls'
 
+# For development purposes, use this to output the email text to your command line console instead
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
