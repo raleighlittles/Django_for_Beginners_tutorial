@@ -6,13 +6,12 @@
 {%  block title %} Home page {%  endblock %}
 
 {%  block content %}
-{%  if user.is_authenticated %}
-    Logged in as: {{ user.username }}
-    <p> Click to <a href="{%  url 'logout' %}">logout</a></p>
-
-{%  else %}
-    <p>Not currently logged in.</p>
-    <p> Either <a href="{% url 'login' %}">login </a> or <a href="{%  url 'signup' %}">signup</a> to continue </p>
-
-{% endif %}
-{% endblock %}
+    <div clas="jumbotron">
+        <h1 class="display-4"> Newspaper application </h1>
+        <p class="lead"> Built using Django 2.0. </p>
+        <p> <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">
+            View articles
+            </a>
+        </p>
+    </div>
+{%  endblock content %}

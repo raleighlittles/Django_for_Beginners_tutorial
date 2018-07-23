@@ -1,0 +1,26 @@
+<!-- templates/article_detail.html -->
+
+{%  extends 'base.html' %}
+
+{%  block content %}
+<div class="article-entry">
+    <h2>
+        {{ object.title }}
+    </h2>
+
+    <p> Author: {{ object.author }} | Date: {{ object.date }}</p>
+
+    <p>
+        {{ object.body }}
+    </p>
+</div>
+
+<p> <a href="{%  url 'article_edit' article.pk %}">Edit</a>
+    | <a href="{%  url 'article_delete' article.pk %}">Delete</a>
+</p>
+
+<p>
+    View <a href="{%  url 'article_list' %}">all articles</a>.
+</p>
+
+{% endblock content %}
