@@ -14,12 +14,21 @@
             </div>
 
             <div class="card-body">
-                {{ article.body }}
+                <p> {{ article.body }} </p>
+                <a href="{% url 'article_edit' article.pk %}">Edit</a> |
+                <a href="{% url 'article_delete' article.pk %}">Delete</a>
             </div>
 
-            <div class="card-footer text-center text-muted">
-               <a href="{% url 'article_edit' article.pk %}">Edit</a> |
-                <a href="{% url 'article_delete' article.pk %}">Delete</a>
+            <div class="card-footer">
+               {%  for comment in article.comments.all %}
+                   <p>
+                   <!-- middot = middle dot. from here: https://www.w3schools.com/charsets/ref_html_entities_4.asp -->
+                   <span class="font-weight-bold"> Author: {{ comment.author }} </span>
+                       Comment: {{  comment  }}
+
+                   </p>
+
+                {% endfor %}
             </div>
         </div>
 
